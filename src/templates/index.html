@@ -8,7 +8,7 @@
 </head>
 
 <body>
-
+  <script type = text/javascript src="copy.js"></script>
   <div class = "gradient">
   <div class="box">
     <h1>Video Essay Generator</h1>
@@ -36,7 +36,7 @@
     <br>
     <div class="traits">
       <div class="trait_1">
-        <label class="dropbtn">Trait 1:</label><br>
+        <label class="dropbtn" style = "text-align: center;">Trait 1:</label><br>
         <input type="radio" name="trait1" value="Serious">
         <label class="dropdown-content">Serious</label><br>
         <input type="radio" name="trait1" value="Charismatic">
@@ -59,16 +59,39 @@
         <label class="dropdown-content">Intellectual</label><br>
       </div>
       
-      </div>
+     
   </form>
+<div>
+  <br>
+ 
+</div>
+<br>
   
+  <div class="final">
+    {% if result %}
+    <div class = "copyButtonDiv">
+      <br>
+    <!--<button class="copyButton" onmousedown="copyFunction()">Copy text</button>-->
+    <br>
+  </div>
+    <div class="result" id="finalResult" onclick="copyDivToClipboard()">{{ result }}
+      <script>
+        function copyDivToClipboard() {
+            var range = document.createRange();
+            range.selectNode(document.getElementById("a"));
+            window.getSelection().removeAllRanges(); 
+            window.getSelection().addRange(range); 
+            document.execCommand("copy");
+            window.getSelection().removeAllRanges();
+        }
+    </script>
+    </div>
+    {% endif %}
+  </div>
+</div>
   
   <br>
-  <div class="final">
-  {% if result %}
-  <div class="result">{{ result }}</div>
-  {% endif %}
-</div>
+
 
 
  

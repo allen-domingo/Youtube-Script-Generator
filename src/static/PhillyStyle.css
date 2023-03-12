@@ -25,7 +25,7 @@ div[class=result] {
     align-items: center;
     display: block;
    
-    width: 600px;
+    width: 450px;
     height: 150px;
     overflow-x: hidden;
     overflow-y: auto;
@@ -73,6 +73,7 @@ input[type="submit"]:hover{
 }
 .dropbtn {
     background-color: #FF0000;
+    align-self: center;
     color: #fff;
     font-size: 18px;
     width: 200px;
@@ -82,6 +83,7 @@ input[type="submit"]:hover{
     padding: 0 25px;
     border-radius: 25px;
     vertical-align: top;
+    text-align: center;
   }
   .dropdown {
     position: relative;
@@ -92,7 +94,7 @@ input[type="submit"]:hover{
   }
   .dropdown-content {
     display: inline-block;
-    
+    text-align: center;
     
     background-color: #f1f1f1;
     min-width: 160px;
@@ -160,3 +162,15 @@ justify-content: center;
 display: block;
 align-items: center;
 }
+button[class=copyButton]{
+    background-color: #FF0000;
+    color: #fff;
+    font-size: 18px;
+    width: 200px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding: 0 25px;
+    border-radius: 25px;
+}
+button[class=copyButton]
